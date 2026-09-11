@@ -4,7 +4,7 @@ const Navigation = () => {
   const [activeLink, setActiveLink] = useState("Home");
 
   const navLinks = [
-    { name: "Home", href: "Home" },
+    { name: "Home", href: "home" },
     { name: "Technologies", href: "technologies" },
     { name: "Projects", href: "projects" },
     { name: "About", href: "about" },
@@ -13,12 +13,11 @@ const Navigation = () => {
 
   return (
     <nav className="hidden items-center gap-7 md:flex">
-      {navLinks.map((link,index) => (
+      {navLinks.map((link, index) => (
         <a
-          key ={index}
-          href={link.href}
-          onClick={() => setActiveLink(link.name)}
-          className={`text-sm transition-colors ${
+          key={index}
+          href="home"
+          className={`text-sm font-medium transition-colors ${
             activeLink === link.name
               ? "text-[#db2777]"
               : "text-[#475569] hover:text-[#db2777]"
@@ -32,3 +31,9 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+
+
+
+
+
