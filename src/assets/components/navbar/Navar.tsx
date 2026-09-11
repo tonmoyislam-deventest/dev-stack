@@ -1,10 +1,10 @@
-import Logo from "../components/navbar/logo";
-import Navigation from "./navbar/navigation";
-import SignIn from "./navbar/SignIN";
-import SignUp from "./navbar/SignUp";
+import Logo from "../navbar/Logo";
+import Navigation from "../navbar/Navigation";
+import SignIn from "../navbar/SignIn";
+import SignUp from "../navbar/SignUp";
 const Navbar = () => {
   return (
-    <nav className="w-full border-b border-gray-100 bg-white ">
+    <nav className="w-full border-b border-gray-100 ">
       <div className="mx-auto flex h-20 container items-center justify-between px-10">
         <Logo />
         <Navigation />

@@ -1,8 +1,10 @@
-import Navbar from "./assets/components/Navar"
+import Hero from "./assets/components/hero/Hero"
+import Navbar from "./assets/components/navbar/Navar"
 const App = () => {
   return (
-    <div className="bg-[#f1f5f9]">
+    <div className="bg-white">
       <Navbar/>
+      <Hero/>
     </div>
   )
 }
