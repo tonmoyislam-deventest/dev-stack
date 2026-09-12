@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import CardHeading from "./card-section-heading/CardHeading"
 import CardLeft from "./card-content/left/CardLeft";
 import CardRight from "./card-content/right/CardRight";
-import type {Card} from "../../../type/Type"
+import type {Card} from "../../type/Type"
 
 // Card Data
 const getCardData = async (): Promise<Card[]> => {

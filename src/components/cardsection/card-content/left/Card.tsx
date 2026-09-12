@@ -1,5 +1,5 @@
 import { use } from "react";
-import type { CardLeftProps } from "../../../../../type/Type";
+import type { CardLeftProps } from "../../../../type/Type";
 
 const Card = ({ promise }: CardLeftProps) => {
   const cardData = use(promise);

@@ -1,4 +1,4 @@
-import type {CardLeftProps} from "../../../../../type/Type"
+import type {CardLeftProps} from "../../../../type/Type"
 import Card from "../left/Card"
 const CardLeft = ({promise}:CardLeftProps) => {
   return (
