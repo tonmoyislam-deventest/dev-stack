@@ -22,11 +22,11 @@ export default defineConfig({
   ],
   server: {
     watch: {
-      usePolling: true,       // ফাইল ট্র্যাক করার জন্য ফাইল সিস্টেমকে বারবার পোল করবে
-      interval: 500,          // প্রতি ৫০০ মিলিসেকেন্ড পর পর পরিবর্তন চেক করবে
+      usePolling: true,       
+      interval: 500,         
     },
   },
   optimizeDeps: {
-    exclude: ['@tailwindcss/vite'], // এই প্লাগইনটিকে ক্যাশ থেকে আলাদা রাখবে যেন HMR ব্রেক না হয়
+    exclude: ['@tailwindcss/vite'], 
   },
 })
