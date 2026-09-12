@@ -1,6 +1,6 @@
-import CardSection from "./assets/components/cardsection/CardSection"
-import Hero from "./assets/components/hero/Hero"
-import Navbar from "./assets/components/navbar/Navar"
+import CardSection from "./components/cardsection/CardSection"
+import Hero from "./components/hero/Hero"
+import Navbar from "./components/navbar/Navar"
 const App = () => {
   return (
     <div className="bg-white">
