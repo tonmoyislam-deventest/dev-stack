@@ -1,7 +1,7 @@
 import { use } from "react";
 import type { CardLeftProps } from "../../../../type/Type";
 
-const Card = ({ promise }: CardLeftProps) => {
+const Card = ({ promise, btnCliked, isBtnclicked, addToStack }: CardLeftProps) => {
   const cardData = use(promise);
 
   return (
@@ -10,7 +10,7 @@ const Card = ({ promise }: CardLeftProps) => {
       {cardData.map((card) => (
         <div
           key={card.id}
-          className="flex h-70.5 w-[288px] flex-col rounded-2xl border border-[#e5e7eb] bg-white p-5"
+          className={`${isBtnclicked && addToStack.includes(card.name) ? `border border-pink-400/60 shadow `:`border border-[#e5e7eb]`} flex h-70.5 w-[288px] flex-col rounded-2xl  bg-white p-5`}
         >
           <div className="flex items-start justify-between">
 
@@ -66,8 +66,17 @@ const Card = ({ promise }: CardLeftProps) => {
 
             </div>
 
-            <button className="mt-4 w-full cursor-pointer rounded-md bg-[#020817] py-2.5 text-[10px] font-medium text-white active:scale-90">
-              Add to Stack
+            <button
+              className={`mt-4 w-full cursor-pointer rounded-md py-2.5 text-[12px] font-bold active:scale-90 ${isBtnclicked && addToStack.includes(card.name)
+                  ? "bg-pink-300/40 text-pink-600"
+                  : "bg-[#020817] text-white"
+                }`}
+              onClick={btnCliked}
+              value={card.name}
+            >
+              {isBtnclicked && addToStack.includes(card.name)
+                ? "✓ Added to Stack"
+                : "Add to Stack"}
             </button>
 
           </div>
