@@ -1,4 +1,5 @@
 import CardSection from "./components/cardsection/CardSection"
+import Footer from "./components/footer/Footer"
 import Hero from "./components/hero/Hero"
 import Navbar from "./components/navbar/Navar"
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <CardSection/>
+      <Footer/>
     </div>
   )
 }
