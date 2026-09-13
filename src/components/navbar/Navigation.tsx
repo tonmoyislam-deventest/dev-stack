@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Navigation = () => {
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink,] = useState("Home");
 
   const navLinks = [
     { name: "Home", href: "home" },

@@ -21,7 +21,7 @@ Dev Stack is a developer-focused web application for exploring different technol
 - React Toastify
 - Vite
 
-**🌐 Live Link:** [Live-Link]()
+**🌐 Live Link:** [Live-Link](https://dev-stack-deventest.netlify.app/)
 
 **💻 GitHub Repo:** [Github-Repo](https://github.com/tonmoyislam-deventest/dev-stack)
 
