@@ -1,5 +1,8 @@
 import { use } from "react";
 import type { CardRightProps } from "../../../../type/Type";
+import { Bounce, toast,Flip } from "react-toastify";
+import EmptyStack from "./EmptyStack";
+
 
 const CardRight = ({
   promise,
@@ -15,7 +18,7 @@ const CardRight = ({
 
   return (
     <div className="rounded-2xl border border-[#e5e7eb] bg-white p-5 self-start">
-      {isBtnclicked && addToStack.length > 0 ? (
+      {isBtnclicked && addToStack.length > 0 ? 
         <>
           {/* Header */}
           <h3 className="text-[20px] font-semibold text-[#1e293b]">
@@ -65,6 +68,17 @@ const CardRight = ({
                     );
 
                     setAddToStack(newStack);
+                    toast.error(`${clickedName} is deleted!`, {
+                      position: "top-right",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: false,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      transition: Bounce,
+                    });
                   }}
                   className="cursor-pointer text-2xl text-[#94a3b8]"
                 >
@@ -77,6 +91,17 @@ const CardRight = ({
           <button
             onClick={() => {
               setAddToStack([]);
+              toast.error("Remove all you stack", {
+                      position: "top-right",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: false,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      transition: Flip,
+                    });
             }}
             className="w-full cursor-pointer rounded-xl border border-[#fecaca] py-2 mt-4 text-[16px] font-semibold text-[#ef4444] hover:bg-[#fef2f2]"
           >
@@ -85,23 +110,9 @@ const CardRight = ({
         </>
 
 
-      ) : (
-        <>
-          <h3 className="text-[20px] font-semibold text-[#1e293b]">
-            Your Stack
-          </h3>
+       : <EmptyStack/>
 
-          <p className="mt-2 text-[14px] leading-5.5 text-[#94a3b8]">
-            No technologies selected yet.
-          </p>
-
-          <div className="mt-5 flex min-h-25 items-center justify-center rounded-2xl border border-dashed border-[#dbe4ee]">
-            <p className="text-base text-[#94a3b8]">
-              Your stack is empty.
-            </p>
-          </div>
-        </>
-      )}
+      }
     </div>
   );
 };

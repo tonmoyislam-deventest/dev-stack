@@ -75,7 +75,7 @@ const Card = ({ promise, btnCliked, isBtnclicked, addToStack }: CardLeftProps) =
               value={card.name}
             >
               {isBtnclicked && addToStack.includes(card.name)
-                ? "✓ Added to Stack"
+                ? "✓ Added to Stack" 
                 : "Add to Stack"}
             </button>
 
