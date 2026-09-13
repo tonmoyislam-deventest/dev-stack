@@ -24,7 +24,7 @@ const CardSection = () => {
 
     if (!addToStack.includes(e.currentTarget.value)) {
       setAddToStack([...addToStack, e.currentTarget.value]);
-      toast.success(`${e.currentTarget.value!} is now Added in your stack`, {
+      toast.success(`${e.currentTarget.value!} has been added to your stack!`, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -36,7 +36,7 @@ const CardSection = () => {
         transition: Bounce,
       });
     } else {
-      toast.warning(`${e.currentTarget.value!} is already in your stack.!`, {
+      toast.warning(`${e.currentTarget.value!} is already in your stack!`, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,

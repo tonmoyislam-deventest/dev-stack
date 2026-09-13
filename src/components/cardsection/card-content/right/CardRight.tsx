@@ -68,7 +68,7 @@ const CardRight = ({
                     );
 
                     setAddToStack(newStack);
-                    toast.error(`${clickedName} is deleted!`, {
+                    toast.error(`${clickedName} has been removed from your stack!`, {
                       position: "top-right",
                       autoClose: 2000,
                       hideProgressBar: false,
@@ -91,7 +91,7 @@ const CardRight = ({
           <button
             onClick={() => {
               setAddToStack([]);
-              toast.error("Remove all you stack", {
+              toast.error("All technologies have been removed!", {
                       position: "top-right",
                       autoClose: 2000,
                       hideProgressBar: false,
